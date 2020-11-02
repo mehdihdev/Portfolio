@@ -8,6 +8,17 @@ router.get('/', function(req, res, next) {
 
 router.get('/contact', function(req,res,next) {
   res.render('contact')
-})
+});
+
+router.get('/admin', function(req, res, next) {
+  res.render('admin')
+});
+
+router.get('/store/:item', function(req, res, next) {
+  res.render(req.param('item'))
+  //res.send(req.param('item'));
+});
+
+
 
 module.exports = router;
